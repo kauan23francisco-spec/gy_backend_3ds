@@ -8,7 +8,7 @@ const  esporte = {
     tipo: 'volei',
     preço: 1500,
     jogadores: 12,
-    nessesario: [ 'bola de volei', 'rede de volei','tenis e volei'],
+    necessario: [ 'bola de volei', 'rede de volei','tenis e volei'],
 }
 console.log(esporte)
 console.log(esporte.tipo)
