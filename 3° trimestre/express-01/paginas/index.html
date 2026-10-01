@@ -1,14 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../index.css">
-    <title>inicio doces</title>
-    
+    <title>Amor em Pedaços | Confeitaria Gourmet</title>
+    <!-- Importação das Fontes Elegantes e Limpas solicitadas -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../estilos/index.css">
 </head>
 <body>
-    <h3>página Inicial</h3>
-    <p>bem-vindo(a) a home!</p>
+
+    <!-- Cabeçalho / Menu de Navegação com as Rotas do Express -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="/" class="logo">Amor em Pedaços</a>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="/produtos" class="nav-link">Produtos</a></li>
+                    <li><a href="/serviço" class="nav-link">Serviços & Festas</a></li>
+                    <li><a href="/sobre" class="nav-link">Nossa História</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <!-- Ícone de Sacola Minimalista (Estilo Boutique) -->
+                <a href="/carrinho" class="bag-icon" aria-label="Sacola de compras">
+                    <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Seção Hero (Destaque Principal com Copy Sensorial) -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <span class="hero-subtitle">Alta Confeitaria Artesanal</span>
+            <h1>Momentos inesquecíveis traduzidos em sabores únicos</h1>
+            <p class="hero-description">Massa amanteigada de baunilha que derrete na boca, recheada com brigadeiro cremoso de colher e finalizada com lascas crocantes de amêndoas torradas.</p>
+            <div class="hero-buttons">
+                <a href="/produtos" class="btn-primary">Encomendar Agora</a>
+                <a href="/serviço" class="btn-secondary">Menu de Eventos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Destaques de Produtos -->
+    <section class="featured-products">
+        <div class="section-title-container">
+            <span class="section-badge">Seleção do Chef</span>
+            <h2>Nossos Doces Mais Desejados</h2>
+        </div>
+        
+        <div class="products-grid">
+            <!-- Produto 1 -->
+            <div class="product-card">
+                <div class="product-image-placeholder">
+                    <span>Foto em Alta Definição</span>
+                </div>
+                <div class="product-info">
+                    <h3>Éclair de Pistache</h3>
+                    <p class="product-copy">Massa choux leve e dourada, preenchida com um aveludado creme de pistache iraniano e cobertura de chocolate branco belga.</p>
+                    <span class="product-price">R$ 24,90</span>
+                    <a href="/produtos" class="btn-card">Ver Detalhes</a>
+                </div>
+            </div>
+
+            <!-- Produto 2 -->
+            <div class="product-card">
+                <div class="product-image-placeholder">
+                    <span>Foto em Alta Definição</span>
+                </div>
+                <div class="product-info">
+                    <h3>Bolo Supremo de Cacau</h3>
+                    <p class="product-copy">Três camadas de bolo úmido de cacau 70%, intercaladas com fudge cremoso e pedaços de morangos frescos colhidos no dia.</p>
+                    <span class="product-price">R$ 189,00</span>
+                    <a href="/produtos" class="btn-card">Ver Detalhes</a>
+                </div>
+            </div>
+
+            <!-- Produto 3 -->
+            <div class="product-card">
+                <div class="product-image-placeholder">
+                    <span>Foto em Alta Definição</span>
+                </div>
+                <div class="product-info">
+                    <h3>Caixa Presente Premium</h3>
+                    <p class="product-copy">Uma joia em forma de doce. Seleção com 12 bombons finos artesanais embalados em caixa rígida com fita de cetim e cartão personalizado.</p>
+                    <span class="product-price">R$ 95,00</span>
+                    <a href="/produtos" class="btn-card">Ver Detalhes</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Diferenciais Premium e Experiência -->
+    <section class="experience-section">
+        <div class="experience-container">
+            <div class="experience-block">
+                <!-- Ícone Minimalista de Presente -->
+                <svg xmlns="http://w3.org" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="22" x2="12" y2="8"></line><path d="M5 12H2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V12h-3"></path><path d="M22 7H2v5h20V7z"></path><path d="M12 7c1.5-3.5 4.5-3.5 6-1.5s.5 4.5-3 4.5H12z"></path><path d="M12 7c-1.5-3.5-4.5-3.5-6-1.5s-.5 4.5 3 4.5H12z"></path></svg>
+                <h3>Feito para Presentear</h3>
+                <p>Adicione embalagens exclusivas de alta costura e cartões com dedicatórias impressas direto no carrinho.</p>
+            </div>
+            <div class="experience-block">
+                <!-- Ícone de Calendário / Agendamento -->
+                <svg xmlns="http://w3.org" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                <h3>Agendamento Flexível</h3>
+                <p>Escolha o dia e o horário exato em que deseja receber seus doces frescos para sua celebração especial.</p>
+            </div>
+            <div class="experience-block">
+                <!-- Ícone de Origem / Trigo / Ramos -->
+                <svg xmlns="http://w3.org" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="M12 6a6 6 0 0 1 6 6v1a5 5 0 0 1-5 5H11a5 5 0 0 1-5-5v-1a6 6 0 0 1 6-6z"></path></svg>
+                <h3>Ingredientes Puros</h3>
+                <p>Trabalhamos exclusivamente com favas de baunilha naturais, chocolates belgas e frutas selecionadas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prova Social Afetiva -->
+    <section class="testimonials-section">
+        <span class="section-badge">Depoimentos</span>
+        <h2>Quem prova, armazena memórias</h2>
+        <div class="testimonial-card">
+            <p class="testimonial-text">"A embalagem chegou impecável e parecia uma joia. Mas a verdadeira mágica aconteceu na primeira garfada: o equilíbrio perfeito do açúcar e a leveza da massa fizeram com que o bolo fosse o assunto principal do nosso jantar de Natal."</p>
+            <span class="testimonial-author">— Mariana S., Curitiba</span>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Amor em Pedaços Confeitaria Gourmet. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="/sobre">Sobre Nós</a>
+                <a href="/produtos">Nossos Doces</a>
+                <a href="/serviço">Eventos</a>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>

@@ -1,3 +1,410 @@
-*{background-color: tomato;
-color:white
+/* ==========================================================================
+   1. Variáveis de Ambiente, Cores Globais e Resets
+   ========================================================================== */
+:root {
+    --bg-principal: #FBF7F4;       /* Off-white Amendoado */
+    --texto-cacau: #704214;        /* Castanho Cacau */
+    --destaque-dourado: #DDA15E;   /* Dourado Queimado */
+    --acao-pink: #E7A79B;          /* Rosa Quartz */
+    --branco-puro: #FFFFFF;
+    
+    --font-titulos: 'Cormorant Garamond', serif;
+    --font-apoio: 'Montserrat', sans-serif;
+    
+    --shadow-suave: 0 4px 20px rgba(112, 66, 20, 0.04);
+    --transition-padrao: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-principal);
+    color: var(--texto-cacau);
+    font-family: var(--font-apoio);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-padrao);
+}
+
+/* ==========================================================================
+   2. Cabeçalho / Navegação
+   ========================================================================== */
+.main-header {
+    background-color: rgba(251, 247, 244, 0.95);
+    border-bottom: 1px solid rgba(112, 66, 24, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-titulos);
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-link {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: var(--destaque-dourado);
+}
+
+.bag-icon {
+    color: var(--texto-cacau);
+    display: flex;
+    align-items: center;
+}
+
+.bag-icon:hover {
+    color: var(--acao-pink);
+    transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   3. Seção Hero (Apresentação de Impacto)
+   ========================================================================== */
+.hero-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 70vh;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-subtitle {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--destaque-dourado);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.hero-section h1 {
+    font-family: var(--font-titulos);
+    font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 40px;
+    color: rgba(112, 66, 20, 0.85);
+}
+
+/* Botões Customizados */
+.btn-primary {
+    background-color: var(--acao-pink);
+    color: var(--branco-puro);
+    padding: 16px 36px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(231, 167, 155, 0.3);
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.btn-primary:hover {
+    background-color: #df9689;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(231, 167, 155, 0.4);
+}
+
+.btn-secondary {
+    border: 1px solid var(--texto-cacau);
+    color: var(--texto-cacau);
+    padding: 16px 36px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(112, 66, 20, 0.04);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   4. Seção de Vitrine de Produtos (Cards)
+   ========================================================================== */
+.featured-products {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+.section-title-container {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-badge {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--destaque-dourado);
+    font-weight: 600;
+}
+
+h2 {
+    font-family: var(--font-titulos);
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background-color: var(--branco-puro);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-suave);
+    transition: var(--transition-padrao);
+    border: 1px solid rgba(112, 66, 24, 0.03);
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(112, 66, 20, 0.08);
+}
+
+.product-image-placeholder {
+    background-color: #EFEAE6;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    color: rgba(112, 66, 20, 0.4);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.product-info {
+    padding: 30px;
+}
+
+.product-info h3 {
+    font-family: var(--font-titulos);
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.product-copy {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: rgba(112, 66, 20, 0.8);
+    margin-bottom: 20px;
+    height: 65px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.product-price {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--texto-cacau);
+}
+
+.btn-card {
+    display: block;
+    text-align: center;
+    border: 1px solid rgba(112, 66, 24, 0.15);
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.btn-card:hover {
+    background-color: var(--texto-cacau);
+    color: var(--branco-puro);
+}
+
+/* ==========================================================================
+   5. Experiência e Diferenciais (Módulos de Clicabilidade)
+   ========================================================================== */
+.experience-section {
+    background-color: rgba(221, 161, 94, 0.05);
+    padding: 80px 20px;
+    margin: 40px 0;
+}
+
+.experience-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.experience-block {
+    flex: 1;
+    min-width: 280px;
+    text-align: center;
+    padding: 20px;
+}
+
+.experience-block svg {
+    color: var(--destaque-dourado);
+    margin-bottom: 20px;
+}
+
+.experience-block h3 {
+    font-family: var(--font-titulos);
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.experience-block p {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: rgba(112, 66, 20, 0.8);
+}
+
+/* ==========================================================================
+   6. Seção de Testemunhos (Prova Social)
+   ========================================================================== */
+.testimonials-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.testimonial-card {
+    margin-top: 40px;
+}
+
+.testimonial-text {
+    font-family: var(--font-titulos);
+    font-size: 1.6rem;
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--texto-cacau);
+}
+
+.testimonial-author {
+    display: block;
+    margin-top: 20px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--destaque-dourado);
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   7. Rodapé (Footer)
+   ========================================================================== */
+.main-footer {
+    border-top: 1px solid rgba(112, 66, 24, 0.08);
+    padding: 40px 20px;
+    background-color: var(--branco-puro);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 0.85rem;
+    color: rgba(112, 66, 20, 0.6);
+}
+
+.footer-links a {
+    margin-left: 25px;
+}
+
+.footer-links a:hover {
+    color: var(--destaque-dourado);
+}
+
+/* Responsive Mobile Layout */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .nav-menu ul {
+        gap: 20px;
+    }
+    .hero-section h1 {
+        font-size: 2.3rem;
+    }
+    .hero-buttons .btn-primary, .hero-buttons .btn-secondary {
+        display: block;
+        margin: 10px auto;
+        max-width: 280px;
+    }
+    .hero-buttons .btn-primary {
+        margin-right: auto;
+    }
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-links a {
+        margin: 0 10px;
+    }
 }
