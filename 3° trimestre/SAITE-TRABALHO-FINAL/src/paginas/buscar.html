@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StreamMusic - Buscar</title>
+  <link rel="stylesheet" href="../../css/buscar.css">
+  <!-- Ícones do FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Menu Lateral (Barra de Navegação / Rotas) -->
+  <aside class="sidebar">
+    <div class="logo">
+      <i class="fa-solid fa-music"></i>
+      <span>StreamMusic</span>
+    </div>
+    
+    <nav class="nav-routes">
+      <a href="/home" class="nav-item">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+      </a>
+      <a href="/buscar" class="nav-item active">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <span>Buscar</span>
+      </a>
+      <a href="/biblioteca" class="nav-item">
+        <i class="fa-solid fa-book-bookmark"></i>
+        <span>Sua Biblioteca</span>
+      </a>
+    </nav>
+
+    <div class="user-playlists">
+      <h3>Sua Seleção</h3>
+      <ul>
+        <li><i class="fa-solid fa-heart"></i> Músicas Curtidas</li>
+        <li><i class="fa-solid fa-list"></i> Minha Playlist #1</li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- Conteúdo Principal -->
+  <main class="main-content">
+    
+    <!-- Barra Superior de Pesquisa -->
+    <header class="top-bar">
+      <div class="search-main">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" placeholder="O que você quer ouvir? (Músicas, Artistas, Pop, Rock, Trap, Sertanejo...)" autofocus />
+      </div>
+      <div class="profile-icon">
+        <i class="fa-solid fa-user"></i>
+      </div>
+    </header>
+
+    <!-- Navegar por Gêneros (Cards Coloridos) -->
+    <section class="section">
+      <h2>Navegar por Todos os Gêneros</h2>
+      <div class="genres-grid">
+        
+        <div class="genre-card pop">
+          <h3>Pop</h3>
+          <img src="https://via.placeholder.com/100/ffffff/000000?text=POP" alt="Pop">
+        </div>
+
+        <div class="genre-card rock">
+          <h3>Rock</h3>
+          <img src="https://via.placeholder.com/100/ffffff/000000?text=ROCK" alt="Rock">
+        </div>
+
+        <div class="genre-card trap">
+          <h3>Trap / Rap</h3>
+          <img src="https://via.placeholder.com/100/ffffff/000000?text=TRAP" alt="Trap">
+        </div>
+
+        <div class="genre-card sertanejo">
+          <h3>Sertanejo</h3>
+          <img src="https://via.placeholder.com/100/ffffff/000000?text=SERT" alt="Sertanejo">
+        </div>
+
+        <div class="genre-card eletronica">
+          <h3>Eletrônica</h3>
+          <img src="https://via.placeholder.com/100/ffffff/000000?text=EDM" alt="Eletrônica">
+        </div>
+
+        <div class="genre-card mpb">
+          <h3>MPB</h3>
+          <img src="https://via.placeholder.com/100/ffffff/000000?text=MPB" alt="MPB">
+        </div>
+
+        <div class="genre-card funk">
+          <h3>Funk</h3>
+          <img src="https://via.placeholder.com/100/ffffff/000000?text=FUNK" alt="Funk">
+        </div>
+
+        <div class="genre-card indie">
+          <h3>Indie</h3>
+          <img src="https://via.placeholder.com/100/ffffff/000000?text=INDIE" alt="Indie">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Exemplo de Resultados de Pesquisa Recentes / Recomendados -->
+    <section class="section">
+      <h2>Buscas Recentes</h2>
+      <div class="recent-searches">
+        <div class="search

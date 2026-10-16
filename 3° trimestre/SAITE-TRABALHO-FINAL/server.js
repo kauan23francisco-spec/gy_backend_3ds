@@ -4,11 +4,14 @@ const dirBase = import.meta.dirname
 const app = express()
 const porta = 3000
 //usando middleware(software intermediário)
-app.use(express.static(path.join(dirBase,'publico')))
+app.use(express.static(path.join(dirBase,'src/publico')))
 
 //criar rotas do servidor
 app.get('/',(req, res)=> {
-    res.sendFile('/paginas/index.html',{root: dirBase})
+    res.sendFile('src/paginas/index.html',{root: dirBase})
+})
+app.get('/',(req, res)=> {
+    res.sendFile('src/paginas/buscar.html',{root: dirBase})
 })
 
 

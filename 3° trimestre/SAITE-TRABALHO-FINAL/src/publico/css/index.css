@@ -1,0 +1,334 @@
+/* Paleta e Estilo Geral (Conforme anotações: Preto Profundo #121212) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #121212; /* Preto profundo para destacar capas */
+  color: #ffffff;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Sidebar / Rotas */
+.sidebar {
+  width: 240px;
+  background-color: #000000;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #1db954;
+}
+
+.nav-routes {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.nav-item {
+  color: #b3b3b3;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.nav-item:hover, .nav-item.active {
+  color: #ffffff;
+}
+
+.user-playlists h3 {
+  font-size: 12px;
+  color: #b3b3b3;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.user-playlists ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #b3b3b3;
+  font-size: 14px;
+}
+
+.user-playlists li {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-playlists li:hover {
+  color: #fff;
+}
+
+/* Conteúdo Principal */
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px 32px 100px 32px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.search-preview {
+  background-color: #242424;
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  border-radius: 50px;
+  width: 450px;
+  gap: 10px;
+}
+
+.search-preview input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  width: 100%;
+}
+
+.profile-icon {
+  background-color: #242424;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Seções */
+.section {
+  margin-bottom: 36px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.see-all {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.see-all:hover {
+  text-decoration: underline;
+}
+
+/* 1. Carrossel Destaque */
+.hero-carousel {
+  margin-bottom: 32px;
+}
+
+.carousel-card {
+  background: linear-gradient(135deg, #1db954 0%, #0d4b22 100%);
+  border-radius: 12px;
+  padding: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.badge {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.carousel-info h1 {
+  font-size: 36px;
+  margin: 8px 0;
+}
+
+.carousel-info p {
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.carousel-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-play {
+  background-color: #ffffff;
+  color: #000;
+  padding: 12px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+/* Cards Grid */
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #181818;
+  padding: 16px;
+  border-radius: 8px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: #282828;
+}
+
+.cover-wrapper {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.cover-wrapper img {
+  width: 100%;
+  border-radius: 6px;
+  display: block;
+}
+
+.play-hover {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background-color: #1db954;
+  color: #000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.card:hover .play-hover {
+  opacity: 1;
+}
+
+.card h4 {
+  font-size: 14px;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card p {
+  font-size: 12px;
+  color: #b3b3b3;
+}
+
+/* Player Mini Fixo no Rodapé */
+.bottom-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #000000;
+  border-top: 1px solid #282828;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+
+.track-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 30%;
+}
+
+.track-info img {
+  border-radius: 4px;
+}
+
+.track-info div {
+  display: flex;
+  flex-direction: column;
+}
+
+.track-info span {
+  font-size: 12px;
+  color: #b3b3b3;
+}
+
+.player-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.player-controls button {
+  background: none;
+  border: none;
+  color: #b3b3b3;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.player-controls button:hover {
+  color: #fff;
+}
+
+.btn-play-mini {
+  color: #fff;
+  font-size: 32px;
+  text-decoration: none;
+}
+
+.player-expand a {
+  color: #b3b3b3;
+  font-size: 18px;
+}
+
+.player-expand a:hover {
+  color: #fff;
+}
