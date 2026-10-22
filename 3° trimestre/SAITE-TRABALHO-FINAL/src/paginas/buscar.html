@@ -1,110 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StreamMusic - Buscar</title>
-  <link rel="stylesheet" href="../../css/buscar.css">
-  <!-- Ícones do FontAwesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <title>Devify - Buscar</title>
+    <link rel="stylesheet" href="/css/comum.css">
+    <link rel="stylesheet" href="/css/buscar.css">
 </head>
 <body>
-
-  <!-- Menu Lateral (Barra de Navegação / Rotas) -->
-  <aside class="sidebar">
-    <div class="logo">
-      <i class="fa-solid fa-music"></i>
-      <span>StreamMusic</span>
+    <div class="container-principal">
+        <nav class="barra-lateral">
+            <div class="logo">Devify</div>
+            <div class="menu-grupo">
+                <a href="/">🏠 Início</a>
+                <a href="/buscar">🔍 Buscar</a>
+                <a href="/curtidas">💚 Músicas Curtidas</a>
+                <a href="/login">👤 Login</a>
+            </div>
+        </nav>
+        <main class="conteudo">
+            <div class="cabecalho-busca">
+                <input type="text" class="campo-busca" placeholder="O que você quer ouvir hoje?">
+            </div>
+            <section class="secao-generos">
+                <h2>Navegar por todas as seções</h2>
+                <div class="grid-generos">
+                    <div class="card-genero b1"><h3>Podcasts</h3></div>
+                    <div class="card-genero b2"><h3>Sertanejo</h3></div>
+                    <div class="card-genero b3"><h3>Pop</h3></div>
+                    <div class="card-genero b4"><h3>Hip-Hop</h3></div>
+                    <div class="card-genero b5"><h3>Rock</h3></div>
+                    <div class="card-genero b6"><h3>Dance / Eletrônica</h3></div>
+                </div>
+            </section>
+        </main>
     </div>
-    
-    <nav class="nav-routes">
-      <a href="/home" class="nav-item">
-        <i class="fa-solid fa-house"></i>
-        <span>Home</span>
-      </a>
-      <a href="/buscar" class="nav-item active">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <span>Buscar</span>
-      </a>
-      <a href="/biblioteca" class="nav-item">
-        <i class="fa-solid fa-book-bookmark"></i>
-        <span>Sua Biblioteca</span>
-      </a>
-    </nav>
-
-    <div class="user-playlists">
-      <h3>Sua Seleção</h3>
-      <ul>
-        <li><i class="fa-solid fa-heart"></i> Músicas Curtidas</li>
-        <li><i class="fa-solid fa-list"></i> Minha Playlist #1</li>
-      </ul>
-    </div>
-  </aside>
-
-  <!-- Conteúdo Principal -->
-  <main class="main-content">
-    
-    <!-- Barra Superior de Pesquisa -->
-    <header class="top-bar">
-      <div class="search-main">
-        <i class="fa-solid fa-magnifying-glass search-icon"></i>
-        <input type="text" placeholder="O que você quer ouvir? (Músicas, Artistas, Pop, Rock, Trap, Sertanejo...)" autofocus />
-      </div>
-      <div class="profile-icon">
-        <i class="fa-solid fa-user"></i>
-      </div>
-    </header>
-
-    <!-- Navegar por Gêneros (Cards Coloridos) -->
-    <section class="section">
-      <h2>Navegar por Todos os Gêneros</h2>
-      <div class="genres-grid">
-        
-        <div class="genre-card pop">
-          <h3>Pop</h3>
-          <img src="https://via.placeholder.com/100/ffffff/000000?text=POP" alt="Pop">
+    <footer class="player-inferior">
+        <div class="player-musica-info">
+            <div class="player-capa">⚡</div>
+            <div class="player-texto"><h4>Code Track #12</h4><p>Synth Wave Dev</p></div>
         </div>
-
-        <div class="genre-card rock">
-          <h3>Rock</h3>
-          <img src="https://via.placeholder.com/100/ffffff/000000?text=ROCK" alt="Rock">
+        <div class="player-controles">
+            <div class="botoes-midia"><span>🔀</span><span>⏮️</span><div class="botao-play">▶</div><span>⏭️</span><span>🔁</span></div>
+            <div class="barra-progresso-container"><span>1:24</span><div class="barra-fundo"><div class="barra-preenchida"></div></div><span>3:45</span></div>
         </div>
-
-        <div class="genre-card trap">
-          <h3>Trap / Rap</h3>
-          <img src="https://via.placeholder.com/100/ffffff/000000?text=TRAP" alt="Trap">
-        </div>
-
-        <div class="genre-card sertanejo">
-          <h3>Sertanejo</h3>
-          <img src="https://via.placeholder.com/100/ffffff/000000?text=SERT" alt="Sertanejo">
-        </div>
-
-        <div class="genre-card eletronica">
-          <h3>Eletrônica</h3>
-          <img src="https://via.placeholder.com/100/ffffff/000000?text=EDM" alt="Eletrônica">
-        </div>
-
-        <div class="genre-card mpb">
-          <h3>MPB</h3>
-          <img src="https://via.placeholder.com/100/ffffff/000000?text=MPB" alt="MPB">
-        </div>
-
-        <div class="genre-card funk">
-          <h3>Funk</h3>
-          <img src="https://via.placeholder.com/100/ffffff/000000?text=FUNK" alt="Funk">
-        </div>
-
-        <div class="genre-card indie">
-          <h3>Indie</h3>
-          <img src="https://via.placeholder.com/100/ffffff/000000?text=INDIE" alt="Indie">
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Exemplo de Resultados de Pesquisa Recentes / Recomendados -->
-    <section class="section">
-      <h2>Buscas Recentes</h2>
-      <div class="recent-searches">
-        <div class="search
+        <div class="player-volume"><span>🔊</span><div class="barra-volume"><div class="volume-preenchido"></div></div></div>
+    </footer>
+</body>
+</html>

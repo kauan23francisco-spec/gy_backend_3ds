@@ -1,116 +1,16 @@
-/* Barra de Pesquisa de Destaque */
-.search-main {
-  background-color: #242424;
-  display: flex;
-  align-items: center;
-  padding: 12px 20px;
-  border-radius: 50px;
-  width: 100%;
-  max-width: 550px;
-  gap: 12px;
-  border: 2px solid transparent;
-  transition: 0.2s;
+.cabecalho-busca { margin-bottom: 32px; }
+.campo-busca {
+    width: 100%; max-width: 360px; padding: 12px 24px; border-radius: 50px; border: none; background-color: #ffffff; color: #000000; font-size: 14px; font-weight: 500; outline: none;
 }
-
-.search-main:focus-within {
-  border-color: #ffffff;
+.secao-generos h2 { font-size: 22px; margin-bottom: 20px; }
+.grid-generos {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 24px;
 }
-
-.search-main .search-icon {
-  font-size: 18px;
-  color: #b3b3b3;
+.card-genero {
+    height: 180px; border-radius: 8px; padding: 16px; position: relative; overflow: hidden; cursor: pointer; transition: transform 0.2s;
 }
-
-.search-main input {
-  background: transparent;
-  border: none;
-  outline: none;
-  color: #ffffff;
-  font-size: 15px;
-  width: 100%;
-}
-
-/* Grid de Cards de Gêneros */
-.genres-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.genre-card {
-  height: 140px;
-  border-radius: 10px;
-  padding: 16px;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.genre-card:hover {
-  transform: scale(1.03);
-}
-
-.genre-card h3 {
-  font-size: 20px;
-  font-weight: bold;
-  color: #ffffff;
-  z-index: 2;
-  position: relative;
-}
-
-.genre-card img {
-  width: 85px;
-  height: 85px;
-  position: absolute;
-  bottom: -10px;
-  right: -10px;
-  transform: rotate(25deg);
-  border-radius: 6px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-}
-
-/* Cores dos Cards de Gêneros */
-.pop { background-color: #8d67ab; }
-.rock { background-color: #e8115b; }
-.trap { background-color: #ba5d07; }
-.sertanejo { background-color: #1e3264; }
-.eletronica { background-color: #006450; }
-.mpb { background-color: #dc148c; }
-.funk { background-color: #e91429; }
-.indie { background-color: #608108; }
-
-/* Tags de Pesquisas Recentes */
-.recent-searches {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 16px;
-}
-
-.search-tag {
-  background-color: #242424;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: #b3b3b3;
-  cursor: pointer;
-}
-
-.search-tag:hover {
-  background-color: #2a2a2a;
-  color: #ffffff;
-}
-
-.remove-tag {
-  font-size: 12px;
-  margin-left: 4px;
-}
-
-.remove-tag:hover {
-  color: #e91429;
-}
+.card-genero:hover { transform: scale(1.03); }
+.card-genero h3 { font-size: 20px; font-weight: bold; word-break: break-word; }
+.b1 { background-color: #27856a; } .b2 { background-color: #1e3264; }
+.b3 { background-color: #148a08; } .b4 { background-color: #ba5d07; }
+.b5 { background-color: #e8115b; } .b6 { background-color: #d84000; }

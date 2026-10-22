@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Devify - Músicas Curtidas</title>
+    <link rel="stylesheet" href="/css/comum.css">
+    <link rel="stylesheet" href="/css/curtidas.css">
+</head>
+<body>
+    <div class="container-principal">
+        <nav class="barra-lateral">
+            <div class="logo">Devify</div>
+            <div class="menu-grupo">
+                <a href="/">🏠 Início</a>
+                <a href="/buscar">🔍 Buscar</a>
+                <a href="/curtidas">💚 Músicas Curtidas</a>
+                <a href="/login">👤 Login</a>
+            </div>
+        </nav>
+        <main class="conteudo">
+            <header class="topo-curtidas">
+                <div class="coracao-gigante">💚</div>
+                <div class="meta-dados">
+                    <p>PLAYLIST</p>
+                    <h1>Músicas Curtidas</h1>
+                    <p class="subtext"><b>João da Silva</b> • 3 músicas</p>
+                </div>
+            </header>
+
+            <!-- Tabela Avançada de Músicas Curtidas -->
+            <section class="tabela-musicas">
+                <div class="tabela-cabecalho">
+                    <div class="col-num">#</div>
+                    <div class="col-titulo">Título</div>
+                    <div class="col-album">Álbum</div>
+                    <div class="col-duracao">🕒</div>
+                </div>
+                
+                <div class="tabela-linha">
+                    <div class="col-num">1</div>
+                    <div class="col-titulo flex-titulo"><div class="mini-foto m1">🎹</div> <div><h4>Oceano</h4><p>Djavan</p></div></div>
+                    <div class="col-album">Coisa de Acender</div>
+                    <div class="col-duracao">3:42</div>
+                </div>
+                <div class="tabela-linha">
+                    <div class="col-num">2</div>
+                    <div class="col-titulo flex-titulo"><div class="mini-foto m2">🎸</div> <div><h4>Tempo Perdido</h4><p>Legião Urbana</p></div></div>
+                    <div class="col-album">Dois</div>
+                    <div class="col-duracao">5:02</div>
+                </div>
+                <div class="tabela-linha">
+                    <div class="col-num">3</div>
+                    <div class="col-titulo flex-titulo"><div class="mini-foto m3">⚡</div> <div><h4>In the End</h4><p>Linkin Park</p></div></div>
+                    <div class="col-album">Hybrid Theory</div>
+                    <div class="col-duracao">3:36</div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer class="player-inferior">
+        <div class="player-musica-info">
+            <div class="player-capa">🎹</div>
+            <div class="player-texto"><h4>Oceano</h4><p>Djavan</p></div>
+        </div>
+        <div class="player-controles">
+            <div class="botoes-midia"><span>🔀</span><span>⏮️</span><div class="botao-play">▶</div><span>⏭️</span><span>🔁</span></div>
+            <div class="barra-progresso-container"><span>0:00</span><div class="barra-fundo"><div class="barra-preenchida" style="width: 0%;"></div></div><span>3:42</span></div>
+        </div>
+        <div class="player-volume"><span>🔊</span><div class="barra-volume"><div class="volume-preenchido"></div></div></div>
+    </footer>
+</body>
+</html>
