@@ -2,69 +2,126 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Devify - Home</title>
-    <link rel="stylesheet" href="/css/comum.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início - HubMúsica</title>
+    <!-- Importação única do CSS local -->
     <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
-    <div class="container-principal">
-        <nav class="barra-lateral">
-            <div class="logo">Devify</div>
-            <div class="menu-grupo">
+    <div class="container-app">
+        <!-- Barra Lateral Fixa -->
+        <aside class="sidebar">
+            <div class="logo">🎵 HubMúsica</div>
+            <nav class="menu-nav">
                 <a href="/">🏠 Início</a>
                 <a href="/buscar">🔍 Buscar</a>
-                <a href="/curtidas">💚 Músicas Curtidas</a>
-                <a href="/login">👤 Login</a>
-            </div>
-        </nav>
-        <main class="conteudo">
-            <header class="boas-vindas">
-                <h1>Boa tarde</h1>
-            </header>
+                <a href="/curtidas">📚 Sua Biblioteca</a>
+                <a href="/login">👤 Entrar</a>
+            </nav>
+        </aside>
+
+        <!-- Conteúdo Principal -->
+        <main class="conteudo-principal">
+            <h1>Boa tarde</h1>
             
-            <!-- Cards Rápidos de Grade Superior -->
-            <div class="grid-rapido">
-                <div class="card-rapido"><div class="mini-capa c1">🔥</div> <span>Top Hits Brasil</span></div>
-                <div class="card-rapido"><div class="mini-capa c2">🎸</div> <span>Rock Classics</span></div>
-                <div class="card-rapido"><div class="mini-capa c3">🎧</div> <span>Lo-Fi Focus</span></div>
-                <div class="card-rapido"><div class="mini-capa c4">🎹</div> <span>MPB Relíquia</span></div>
+            <!-- SEÇÃO 1: Lançamentos -->
+            <h2>Lançamentos da Semana</h2>
+            <div class="grid-cards">
+                <!-- Card 1: Álbum Campeão (Desenho Real de um Disco de Vinil) -->
+                <div class="card">
+                    <div class="capa-album">
+                        <svg viewBox="0 0 100 100" xmlns="http://w3.org" style="background: linear-gradient(135deg, #ffd700, #ffa500);">
+                            <!-- Corpo do Disco Black -->
+                            <circle cx="50" cy="50" r="42" fill="#111111"/>
+                            <!-- Linhas de sulco do vinil -->
+                            <circle cx="50" cy="50" r="36" fill="none" stroke="#333333" stroke-width="1"/>
+                            <circle cx="50" cy="50" r="30" fill="none" stroke="#333333" stroke-width="1"/>
+                            <circle cx="50" cy="50" r="24" fill="none" stroke="#333333" stroke-width="1"/>
+                            <!-- Rótulo Central -->
+                            <circle cx="50" cy="50" r="14" fill="#ffa500"/>
+                            <!-- Furo Central -->
+                            <circle cx="50" cy="50" r="3" fill="#ffffff"/>
+                        </svg>
+                    </div>
+                    <span class="card-title">Álbum Campeão 2026</span>
+                    <span class="card-description">Os maiores hits comerciais do momento.</span>
+                </div>
+
+                <!-- Card 2: Top Brasil (Losango da Bandeira do Brasil + Onda Sonora) -->
+                <div class="card">
+                    <div class="capa-album">
+                        <svg viewBox="0 0 100 100" xmlns="http://w3.org" style="background: linear-gradient(135deg, #009c3b, #007f2d);">
+                            <!-- Losango Amarelo Estilizado -->
+                            <polygon points="50,15 85,50 50,85 15,50" fill="#ffdf00"/>
+                            <!-- Círculo Azul da Música -->
+                            <circle cx="50" cy="50" r="18" fill="#002776"/>
+                            <!-- Faixa Branca Curvada (Onda Harmônica) -->
+                            <path d="M 32 54 Q 50 40 68 46" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <span class="card-title">Top Brasil</span>
+                    <span class="card-description">A playlist mais ouvida no transporte e trabalho.</span>
+                </div>
             </div>
 
-            <!-- Carrossel de Lançamentos Avançado -->
-            <section class="secao-musicas">
-                <h2>Recomendado para você</h2>
-                <div class="grid-cards">
-                    <div class="card-album">
-                        <div class="capa-falsa g1">✨</div>
-                        <h3>Daily Mix 1</h3>
-                        <p>Trap, Hip Hop e muito mais para o seu dia.</p>
+            <!-- SEÇÃO 2: Gêneros Separados -->
+            <h2>Navegar por Gêneros</h2>
+            <div class="grid-cards">
+                <!-- Card 3: Pop Comercial (Fones de Ouvido Estilizados) -->
+                <div class="card">
+                    <div class="capa-album">
+                        <svg viewBox="0 0 100 100" xmlns="http://w3.org" style="background: linear-gradient(135deg, #ec008c, #fc6767);">
+                            <!-- Arco do Fone -->
+                            <path d="M 25 55 A 25 25 0 0 1 75 55" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+                            <!-- Conchas Laterais -->
+                            <rect x="18" y="50" width="12" height="20" rx="5" fill="#ffffff"/>
+                            <rect x="70" y="50" width="12" height="20" rx="5" fill="#ffffff"/>
+                            <!-- Ondas de Som saindo -->
+                            <path d="M 10 50 Q 5 60 10 70" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+                            <path d="M 90 50 Q 95 60 90 70" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+                        </svg>
                     </div>
-                    <div class="card-album">
-                        <div class="capa-falsa g2">🌊</div>
-                        <h3>Chill Vibes</h3>
-                        <p>Músicas calmas para relaxar após o trabalho.</p>
-                    </div>
-                    <div class="card-album">
-                        <div class="capa-falsa g3">⚡</div>
-                        <h3>Estudo Intenso</h3>
-                        <p>Foco total com batidas eletrônicas instrumentais.</p>
-                    </div>
+                    <span class="card-title">Pop Comercial</span>
+                    <span class="card-description">Os maiores sucessos das rádios mundiais.</span>
                 </div>
-            </section>
+
+                <!-- Card 4: Sertanejo Hits (Violão / Viola Caipira) -->
+                <div class="card">
+                    <div class="capa-album">
+                        <svg viewBox="0 0 100 100" xmlns="http://w3.org" style="background: linear-gradient(135deg, #cc4b00, #ff7b25);">
+                            <!-- Corpo do Violão (Formatos de Círculos sobrepostos) -->
+                            <circle cx="50" cy="68" r="20" fill="#662200"/>
+                            <circle cx="50" cy="46" r="14" fill="#662200"/>
+                            <!-- Boca do Violão (Furo) -->
+                            <circle cx="50" cy="52" r="7" fill="#111111"/>
+                            <!-- Braço do Violão -->
+                            <rect x="47" y="10" width="6" height="25" fill="#331100"/>
+                            <!-- Cordas Estilizadas -->
+                            <line x1="49" y1="10" x2="49" y2="65" stroke="#ffffff" stroke-width="0.5" opacity="0.8"/>
+                            <line x1="51" y1="10" x2="51" y2="65" stroke="#ffffff" stroke-width="0.5" opacity="0.8"/>
+                        </svg>
+                    </div>
+                    <span class="card-title">Sertanejo Hits</span>
+                    <span class="card-description">O melhor do sertanejo para ouvir no trabalho.</span>
+                </div>
+
+                <!-- Card 5: Trap & Rock (Guitarra Elétrica Les Paul / Raios) -->
+                <div class="card">
+                    <div class="capa-album">
+                        <svg viewBox="0 0 100 100" xmlns="http://w3.org" style="background: linear-gradient(135deg, #1f4068, #162447);">
+                            <!-- Raio de energia do Rock -->
+                            <polygon points="55,10 25,55 48,55 40,90 75,40 50,40" fill="#e43f5a"/>
+                            <!-- Palheta de Guitarra centralizada -->
+                            <path d="M 40 25 Q 50 15 60 25 Q 65 45 50 60 Q 35 45 40 25 Z" fill="#ffffff" opacity="0.3"/>
+                            <!-- Duas Linhas de Guitarras Cruzadas -->
+                            <line x1="20" y1="20" x2="80" y2="80" stroke="#ffffff" stroke-width="1.5" opacity="0.5"/>
+                        </svg>
+                    </div>
+                    <span class="card-title">Trap & Rock</span>
+                    <span class="card-description">Batidas pesadas e guitarras distorcidas.</span>
+                </div>
+            </div>
         </main>
     </div>
-
-    <!-- Barra do Player Fixo -->
-    <footer class="player-inferior">
-        <div class="player-musica-info">
-            <div class="player-capa">⚡</div>
-            <div class="player-texto"><h4>Code Track #12</h4><p>Synth Wave Dev</p></div>
-        </div>
-        <div class="player-controles">
-            <div class="botoes-midia"><span>🔀</span><span>⏮️</span><div class="botao-play">▶</div><span>⏭️</span><span>🔁</span></div>
-            <div class="barra-progresso-container"><span>1:24</span><div class="barra-fundo"><div class="barra-preenchida"></div></div><span>3:45</span></div>
-        </div>
-        <div class="player-volume"><span>🔊</span><div class="barra-volume"><div class="volume-preenchido"></div></div></div>
-    </footer>
 </body>
 </html>

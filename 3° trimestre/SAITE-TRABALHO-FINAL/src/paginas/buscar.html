@@ -2,48 +2,73 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Devify - Buscar</title>
-    <link rel="stylesheet" href="/css/comum.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar - HubMúsica</title>
+    <!-- Link para o CSS exclusivo da Busca -->
     <link rel="stylesheet" href="/css/buscar.css">
 </head>
 <body>
-    <div class="container-principal">
-        <nav class="barra-lateral">
-            <div class="logo">Devify</div>
-            <div class="menu-grupo">
+    <div class="container-app">
+        <!-- Barra Lateral Fixa -->
+        <aside class="sidebar">
+            <div class="logo">🎵 HubMúsica</div>
+            <nav class="menu-nav">
                 <a href="/">🏠 Início</a>
                 <a href="/buscar">🔍 Buscar</a>
-                <a href="/curtidas">💚 Músicas Curtidas</a>
-                <a href="/login">👤 Login</a>
+                <a href="/curtidas">📚 Sua Biblioteca</a>
+                <a href="/login">👤 Entrar</a>
+            </nav>
+        </aside>
+
+        <!-- Conteúdo Principal -->
+        <main class="conteudo-principal">
+            <h1>Buscar</h1>
+            <div class="busca-container">
+                <input type="text" class="busca-input" placeholder="O que você quer escutar? (Artistas, músicas...)">
             </div>
-        </nav>
-        <main class="conteudo">
-            <div class="cabecalho-busca">
-                <input type="text" class="campo-busca" placeholder="O que você quer ouvir hoje?">
-            </div>
-            <section class="secao-generos">
-                <h2>Navegar por todas as seções</h2>
-                <div class="grid-generos">
-                    <div class="card-genero b1"><h3>Podcasts</h3></div>
-                    <div class="card-genero b2"><h3>Sertanejo</h3></div>
-                    <div class="card-genero b3"><h3>Pop</h3></div>
-                    <div class="card-genero b4"><h3>Hip-Hop</h3></div>
-                    <div class="card-genero b5"><h3>Rock</h3></div>
-                    <div class="card-genero b6"><h3>Dance / Eletrônica</h3></div>
+
+            <h2>Navegar por todas as seções</h2>
+            
+            <!-- Grid de Cards de Gêneros Musicais Reais -->
+            <div class="grid-cards">
+                <!-- Seção 1: Pop (Desenho de Microfone / Palco) -->
+                <div class="card-genero bg-pop">
+                    <span class="nome-genero">Pop</span>
+                    <svg class="desenho-genero" viewBox="0 0 100 100" xmlns="http://w3.org">
+                        <circle cx="50" cy="40" r="15" fill="#ffffff" opacity="0.9"/>
+                        <rect x="47" y="55" width="6" height="25" fill="#ffffff" rx="2"/>
+                        <line x1="40" y1="80" x2="60" y2="80" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+                    </svg>
                 </div>
-            </section>
+
+                <!-- Seção 2: Rock (Desenho de Guitarras e Raios) -->
+                <div class="card-genero bg-rock">
+                    <span class="nome-genero">Rock</span>
+                    <svg class="desenho-genero" viewBox="0 0 100 100" xmlns="http://w3.org">
+                        <polygon points="55,10 25,55 48,55 40,90 75,40 50,40" fill="#ffffff" opacity="0.8"/>
+                    </svg>
+                </div>
+
+                <!-- Seção 3: Sertanejo (Desenho de Chapéu de Cowboy) -->
+                <div class="card-genero bg-sertanejo">
+                    <span class="nome-genero">Sertanejo</span>
+                    <svg class="desenho-genero" viewBox="0 0 100 100" xmlns="http://w3.org">
+                        <path d="M 30 60 Q 50 30 70 60" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+                        <path d="M 15 65 Q 50 55 85 65" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+                    </svg>
+                </div>
+
+                <!-- Seção 4: Trap (Desenho de Fone de Ouvido) -->
+                <div class="card-genero bg-trap">
+                    <span class="nome-genero">Trap</span>
+                    <svg class="desenho-genero" viewBox="0 0 100 100" xmlns="http://w3.org">
+                        <path d="M 30 60 A 20 20 0 0 1 70 60" fill="none" stroke="#ffffff" stroke-width="5"/>
+                        <rect x="22" y="55" width="10" height="18" rx="4" fill="#ffffff"/>
+                        <rect x="68" y="55" width="10" height="18" rx="4" fill="#ffffff"/>
+                    </svg>
+                </div>
+            </div>
         </main>
     </div>
-    <footer class="player-inferior">
-        <div class="player-musica-info">
-            <div class="player-capa">⚡</div>
-            <div class="player-texto"><h4>Code Track #12</h4><p>Synth Wave Dev</p></div>
-        </div>
-        <div class="player-controles">
-            <div class="botoes-midia"><span>🔀</span><span>⏮️</span><div class="botao-play">▶</div><span>⏭️</span><span>🔁</span></div>
-            <div class="barra-progresso-container"><span>1:24</span><div class="barra-fundo"><div class="barra-preenchida"></div></div><span>3:45</span></div>
-        </div>
-        <div class="player-volume"><span>🔊</span><div class="barra-volume"><div class="volume-preenchido"></div></div></div>
-    </footer>
 </body>
 </html>

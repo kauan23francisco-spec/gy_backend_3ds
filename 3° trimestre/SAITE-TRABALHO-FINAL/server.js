@@ -1,34 +1,34 @@
-import express from 'express'
-import path from 'path'
+import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-const dirBase = import.meta.dirname
-const app = express()
-const porta = 3000
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-// Define a pasta pública para o Express encontrar TODOS os seus arquivos .css
-app.use(express.static(path.join(dirBase, 'src/publico')))
+const app = express();
+const PORT = 3000;
 
-// 1. Rota: Página Inicial (Home)
+// Configura o Express para ler a pasta de arquivos estáticos corretamente
+app.use(express.static(path.join(__dirname, 'src', 'publico')));
+
+// ROTAS DO SISTEMA
 app.get('/', (req, res) => {
-    res.sendFile('src/paginas/index.html', { root: dirBase })
-})
+    res.sendFile(path.join(__dirname, 'src', 'paginas', 'index.html'));
+});
 
-// 2. Rota: Buscar
 app.get('/buscar', (req, res) => {
-    res.sendFile('src/paginas/buscar.html', { root: dirBase })
-})
+    res.sendFile(path.join(__dirname, 'src', 'paginas', 'buscar.html'));
+});
 
-// 3. Rota: Músicas Curtidas
 app.get('/curtidas', (req, res) => {
-    res.sendFile('src/paginas/curtidas.html', { root: dirBase })
-})
+    res.sendFile(path.join(__dirname, 'src', 'paginas', 'curtidas.html'));
+});
 
-// 4. Rota: Login
 app.get('/login', (req, res) => {
-    res.sendFile('src/paginas/login.html', { root: dirBase })
-})
+    res.sendFile(path.join(__dirname, 'src', 'paginas', 'login.html'));
+});
 
-// Inicialização e liberação da porta do computador
-app.listen(porta, () => {
-    console.log(`Servidor está vivo em http://localhost:${porta}`)
-})
+// Inicialização do Servidor
+app.listen(PORT, () => {
+    console.log(`Servidor rodando com sucesso em: http://localhost:${PORT}`);
+});

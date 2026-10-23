@@ -1,16 +1,150 @@
-.cabecalho-busca { margin-bottom: 32px; }
-.campo-busca {
-    width: 100%; max-width: 360px; padding: 12px 24px; border-radius: 50px; border: none; background-color: #ffffff; color: #000000; font-size: 14px; font-weight: 500; outline: none;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
-.secao-generos h2 { font-size: 22px; margin-bottom: 20px; }
-.grid-generos {
-    display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 24px;
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
 }
+
+.container-app {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* Sidebar lateral idêntica ao app */
+.sidebar {
+    width: 240px;
+    background-color: #000000;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1db954;
+}
+
+.menu-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.menu-nav a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.menu-nav a:hover {
+    color: #ffffff;
+}
+
+/* Área central */
+.conteudo-principal {
+    flex: 1;
+    background: linear-gradient(to bottom, #1e1e1e 0%, #121212 40%);
+    padding: 36px;
+    overflow-y: auto;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Caixa de Busca Estilo Premium */
+.busca-container {
+    margin-bottom: 40px;
+}
+
+.busca-input {
+    width: 100%;
+    max-width: 450px;
+    padding: 14px 28px;
+    border-radius: 50px;
+    border: none;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 14px;
+    outline: none;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Grid Estrutural Quadrado dos Gêneros */
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 24px;
+}
+
+/* Cards de Categoria Grandes e Dinâmicos */
 .card-genero {
-    height: 180px; border-radius: 8px; padding: 16px; position: relative; overflow: hidden; cursor: pointer; transition: transform 0.2s;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1; /* Transforma em blocos perfeitamente quadrados */
+    border-radius: 8px;
+    padding: 18px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
 }
-.card-genero:hover { transform: scale(1.03); }
-.card-genero h3 { font-size: 20px; font-weight: bold; word-break: break-word; }
-.b1 { background-color: #27856a; } .b2 { background-color: #1e3264; }
-.b3 { background-color: #148a08; } .b4 { background-color: #ba5d07; }
-.b5 { background-color: #e8115b; } .b6 { background-color: #d84000; }
+
+.card-genero:hover {
+    transform: scale(1.03);
+}
+
+/* Texto interno da seção */
+.nome-genero {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+    display: block;
+}
+
+/* Posicionamento Inteligente do Vetor Musical Rotacionado no Canto */
+.desenho-genero {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    bottom: -15px;
+    right: -15px;
+    transform: rotate(25deg);
+    opacity: 0.45;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.card-genero:hover .desenho-genero {
+    transform: rotate(10deg) scale(1.1);
+    opacity: 0.7;
+}
+
+/* Identidade Visual Premium de Gradientes para o Buscar */
+.bg-pop { background: linear-gradient(135deg, #e1306c, #f77737); }
+.bg-rock { background: linear-gradient(135deg, #2b5876, #4e4376); }
+.bg-sertanejo { background: linear-gradient(135deg, #b06ab3, #4568dc); }
+.bg-trap { background: linear-gradient(135deg, #11998e, #38ef7d); }
