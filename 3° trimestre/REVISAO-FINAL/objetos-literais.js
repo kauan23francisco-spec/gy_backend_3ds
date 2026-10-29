@@ -5,4 +5,4 @@ const frutas={
      kiwi: 'ácido'
 }
 
-console.log(frutas,limao )
+console.log(frutas,limao)
